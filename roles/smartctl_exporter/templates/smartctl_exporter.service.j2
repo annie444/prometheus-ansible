@@ -6,8 +6,8 @@ After=network-online.target
 
 [Service]
 Type=simple
-User={{ smartctl_exporter_system_user }}
-Group={{ smartctl_exporter_system_group }}
+User=root
+Group=root
 ExecStart={{ smartctl_exporter_binary_install_dir }}/smartctl_exporter \
     '--smartctl.path={{ smartctl_exporter_smartctl_path }}' \
     '--smartctl.interval={{ smartctl_exporter_smartctl_interval }}' \
